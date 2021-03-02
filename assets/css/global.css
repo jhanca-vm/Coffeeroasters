@@ -1,6 +1,7 @@
 :root {
   --color-100: #fefcf7; /** Light Cream */
   --color-200: #fdd6ba; /** Pale Orange */
+  --color-250: #66d2cf;
   --color-300: #0e8784; /** Dark Cyan */
   --color-400: #83888f; /** Grey */
   --color-500: #333d4b; /** Dark Grey Blue */
@@ -34,12 +35,12 @@
 ::before,
 ::after {
   box-sizing: border-box;
-  color: var(--color-500);
   margin: 0;
   padding: 0;
 }
 
 html {
+  color: var(--color-500);
   font-family: 'Barlow', sans-serif;
   font-size: 62.5%;
 }
@@ -48,7 +49,7 @@ body {
   background-color: var(--color-100);
   font-size: 1.6rem;
   line-height: 2.6rem;
-  min-width: 360px;
+  min-width: 375px;
 }
 
 main {
@@ -58,8 +59,10 @@ main {
 h1,
 h2,
 h3,
-h4 {
-  font-family: 'Fraunces';
+h4,
+button,
+b {
+  font-family: 'Fraunces', serif;
   font-weight: 900;
 }
 
@@ -84,12 +87,70 @@ h4 {
 }
 
 a {
+  color: inherit;
   display: inline-flex;
   text-decoration: none;
 }
 
 button {
+  color: inherit;
   background: none;
   border: none;
   outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.main-button {
+  background-color: var(--color-300);
+  border-radius: 0.6rem;
+  color: var(--color-100);
+  cursor: pointer;
+  font-size: 1.8rem;
+  height: 5.6rem;
+  margin: 0 auto;
+  width: 21.7rem;
+}
+
+.main-button:hover {
+  background-color: var(--color-250);
+}
+
+.main-button:active {
+  box-shadow: inset 0.1rem 0.1rem 0.3rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 540px) {
+  main {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    padding: 0 80px;
+  }
+}
+
+@media (max-width: 1023px) {
+  p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@keyframes descend {
+  from {
+    transform: translateY(-5%);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
