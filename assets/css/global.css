@@ -99,6 +99,10 @@ button {
   outline: none;
 }
 
+picture {
+  display: inline-flex;
+}
+
 img {
   max-width: 100%;
 }
@@ -123,7 +127,7 @@ img {
 }
 
 .main-button:active {
-  box-shadow: inset 0.1rem 0.1rem 0.3rem 0.2rem rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0.1rem 0.1rem 0.4rem 0.2rem rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 540px) {
