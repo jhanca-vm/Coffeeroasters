@@ -1,0 +1,102 @@
+.modal {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  padding: 35px 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.modal--container {
+  max-width: 540px;
+}
+
+.modal--container header {
+  background-image: url('https://imgur.com/sYfhAQz.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  color: white;
+  padding: 28px 24px;
+}
+
+.modal--container div {
+  background-color: var(--color-100);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 40px 24px 24px;
+}
+
+.modal--container div > b {
+  color: var(--color-400);
+  font-size: 24px;
+  line-height: 40px;
+}
+
+.modal--container div p {
+  opacity: 0.8;
+  margin-bottom: 24px;
+}
+
+.modal--container div > span b {
+  font-size: 32px;
+  line-height: 36px;
+  margin-right: 12px;
+}
+
+.modal--container div .main-button::before {
+  content: 'Checkout';
+}
+
+@media (min-width: 540px) {
+  .modal--container header {
+    padding: 48px 56px 40px;
+  }
+
+  .modal--container div {
+    padding: 56px;
+  }
+
+  .modal--container div p {
+    margin: 8px 0 48px;
+  }
+}
+
+@media (min-width: 640px) {
+  .modal--container div > span {
+    align-items: center;
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 639px) {
+  .modal--container header h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .modal--container div > span b {
+    display: none;
+  }
+
+  .modal--container div .main-button {
+    width: 100%;
+  }
+
+  .modal--container div .main-button::before {
+    content: 'Checkout - $14.00 / mo';
+  }
+}
+
+@media (max-width: 767px) {
+  .modal {
+    overflow-y: scroll;
+  }
+}

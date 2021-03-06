@@ -1,0 +1,131 @@
+.field[value='Capsule'] ~ .field[name='Grind Option'] {
+  opacity: 0.5;
+}
+
+.field[value='Capsule'] ~ .field[name='Grind Option'] div {
+  display: none;
+}
+
+.field[value='Capsule'] ~ .field[name='Grind Option'] legend span {
+  cursor: default;
+}
+
+.field[value='Capsule'] ~ .field[name='Grind Option'] legend span:last-of-type {
+  transform: none;
+}
+
+.field legend {
+  align-items: center;
+  color: var(--color-400);
+  display: flex;
+  font-size: 2.4rem;
+  justify-content: space-between;
+  line-height: 2.8rem;
+  margin-bottom: 3.2rem;
+  width: 100%;
+}
+
+.field:last-of-type legend {
+  margin: 0;
+}
+
+.field legend span {
+  cursor: pointer;
+}
+
+.field legend span:first-of-type {
+  max-width: 78%;
+}
+
+.field legend span:last-of-type {
+  background-image: url('~assets/icons/icon-arrow.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1.3rem;
+  width: 1.9rem;
+}
+
+.field--options {
+  display: grid;
+  margin-bottom: 9.6rem;
+  row-gap: 1.6rem;
+}
+
+.field:last-of-type .field--options {
+  margin: 3.2rem 0 0;
+}
+
+.field--options label {
+  background-color: var(--color-150);
+  border-radius: 0.8rem;
+  cursor: pointer;
+  padding: 2.4rem 25px;
+  width: 100%;
+}
+
+.field--options label:hover {
+  background-color: var(--color-200);
+}
+
+.field--options label b {
+  display: inline-block;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.field--options input {
+  display: none;
+}
+
+.field--options input:checked + label {
+  background-color: var(--color-300);
+  color: white;
+}
+
+@media (min-width: 640px) {
+  .field legend {
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+    margin-bottom: 4rem;
+  }
+
+  .field legend span:first-of-type {
+    max-width: 100%;
+  }
+
+  .field--options {
+    column-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 10rem;
+  }
+
+  .field:last-of-type .field--options {
+    margin-top: 4rem;
+  }
+
+  .field--options label {
+    height: 25rem;
+    padding: 3.2rem 25px;
+  }
+
+  .field--options label b {
+    margin-bottom: 2.4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .field legend {
+    font-size: 4rem;
+    margin-bottom: 5.6rem;
+  }
+
+  .field--options {
+    column-gap: 23px;
+    margin-bottom: 8.8rem;
+  }
+
+  .field:last-of-type .field--options {
+    margin-top: 5.6rem;
+  }
+}

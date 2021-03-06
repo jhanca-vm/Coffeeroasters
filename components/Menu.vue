@@ -35,6 +35,7 @@ export default {
   position: fixed;
   right: 0;
   top: 8.2rem;
+  z-index: 1;
 }
 
 .header--menu::before {

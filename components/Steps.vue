@@ -1,5 +1,5 @@
 <template>
-  <ol class="guide">
+  <ol class="steps" :class="dark">
     <li>
       <span><b>01</b></span>
       <h3>Pick your coffee</h3>
@@ -30,67 +30,20 @@
   </ol>
 </template>
 
-<style>
-.guide {
-  border-radius: 1rem;
-  display: grid;
-  list-style: none;
-  margin: 0 -24px;
-  padding: 8rem 24px;
-  row-gap: 5.6rem;
+<script>
+export default {
+  props: {
+    mode: {
+      type: String,
+      default: () => null,
+    },
+  },
+  computed: {
+    dark() {
+      return this.mode === 'dark' ? 'dark' : null
+    },
+  },
 }
+</script>
 
-.guide li h3 {
-  margin: 2.4rem 0;
-}
-
-.guide li span {
-  color: var(--color-200);
-  font-size: 72px;
-  line-height: 1;
-}
-
-.guide li p {
-  margin: 0 auto;
-  max-width: 500px;
-}
-
-@media (min-width: 540px) {
-  .guide {
-    margin: 0 -40px;
-    padding: 8rem 40px;
-  }
-}
-
-@media (min-width: 768px) {
-  .guide {
-    column-gap: 28px;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 4rem 40px 4.4rem;
-  }
-
-  .guide li h3 {
-    margin: 4.2rem 0 3.8rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .guide {
-    column-gap: 120px;
-    margin: 0;
-    max-width: 1045px;
-    padding: 6rem 0 6.4rem;
-  }
-
-  .guide li h3 {
-    margin: 3.8rem 0 4.2rem;
-  }
-}
-
-@media (max-width: 1023px) {
-  .guide li h3 {
-    font-size: 2.8rem;
-    line-height: 3.2rem;
-  }
-}
-</style>
+<style src="~/assets/css/components/steps.css"></style>

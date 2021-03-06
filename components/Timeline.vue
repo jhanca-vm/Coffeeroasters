@@ -2,16 +2,32 @@
   <div class="timeline">
     <span class="line" />
     <div>
-      <span class="circle" />
+      <span class="circle" :class="bgDark" />
     </div>
     <div>
-      <span class="circle" />
+      <span class="circle" :class="bgDark" />
     </div>
     <div>
-      <span class="circle" />
+      <span class="circle" :class="bgDark" />
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    mode: {
+      type: String,
+      default: () => null,
+    },
+  },
+  computed: {
+    bgDark() {
+      return this.mode === 'dark' ? 'bg-dark' : null
+    },
+  },
+}
+</script>
 
 <style>
 .timeline {
@@ -40,9 +56,13 @@
   grid-column: span 2;
   grid-row-start: 2;
   height: 2px;
-  left: 30px;
-  width: 100%;
+  left: 15.5px;
+  width: calc(100% + 28px);
   z-index: -1;
+}
+
+.bg-dark {
+  background: transparent !important;
 }
 
 @media (min-width: 1024px) {
@@ -53,7 +73,7 @@
   }
 
   .timeline .line {
-    width: 118%;
+    width: calc(100% + 120px);
   }
 }
 

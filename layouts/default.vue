@@ -1,5 +1,5 @@
 <template>
-  <div id="__default" :style="[menu ? fixed : null]">
+  <div id="__default" :style="menu || order ? fixed : null">
     <Header />
     <Nuxt />
     <Footer />
@@ -20,6 +20,15 @@ export default {
     menu() {
       return this.$store.state.menu.visible
     },
+    order() {
+      return this.$store.state.order.ready
+    },
   },
 }
 </script>
+
+<style>
+#__default {
+  position: relative;
+}
+</style>

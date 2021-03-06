@@ -18,7 +18,7 @@
     <section class="how-it-works">
       <h4>How it works</h4>
       <Timeline />
-      <Guide />
+      <Steps />
       <NuxtLink to="/subscribe">
         <button class="main-button">Create your plan</button>
       </NuxtLink>
